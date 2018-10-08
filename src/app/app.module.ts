@@ -16,6 +16,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AgmCoreModule } from '@agm/core';
 // AoT requires an exported function for factories
 export const createTranslateLoader = (http: HttpClient) => {
     // for development
@@ -36,6 +37,9 @@ export const createTranslateLoader = (http: HttpClient) => {
         LayoutModule,
         OverlayModule,
         HttpClientModule,
+        AgmCoreModule.forRoot({
+            apiKey: 'AIzaSyBubVnL010ibG1lnUifPXF2wG5t_DIgR2Y'
+          }),
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

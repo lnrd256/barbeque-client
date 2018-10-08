@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule, MatCheckboxModule, MatInputModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LoginRoutingModule } from './login-routing.module';
-import { LoginComponent } from './login.component';
+import { RegisterRoutingModule } from './register-routing.module';
+import { RegisterComponent } from './register.component';
 
 @NgModule({
     imports: [
         CommonModule,
-        LoginRoutingModule,
+        RegisterRoutingModule,
         MatInputModule,
         MatCheckboxModule,
         MatButtonModule,
@@ -17,6 +17,6 @@ import { LoginComponent } from './login.component';
         FormsModule,
         ReactiveFormsModule
     ],
-    declarations: [LoginComponent]
+    declarations: [RegisterComponent]
 })
-export class LoginModule {}
+export class RegisterModule {}

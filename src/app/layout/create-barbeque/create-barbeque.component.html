@@ -1,0 +1,39 @@
+<div>
+    <form class="login-form" [formGroup]="formCreate">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Crear Barbacoa</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-form-field>
+                    <input matInput placeholder="Nombre" formControlName="name">
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Modelo" formControlName="model">
+                </mat-form-field>
+                <mat-form-field>
+                        <input matInput placeholder="Zip Code" formControlName="zipcode">
+                    </mat-form-field>
+
+                <mat-form-field>
+                
+
+
+                    <textarea matInput placeholder="Descripción" formControlName="description"></textarea>
+                </mat-form-field>
+            
+                <div>
+                    <agm-map [latitude]="lat" [longitude]="lng" (mapClick)="changeLocation($event)">
+                            <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                            </agm-map>
+                </div>
+                <br>
+                <div fxFlexFill>
+                        <button mat-raised-button color="primary" (click)="save($event)">Guardar </button>
+                </div>
+                
+            </mat-card-content>
+        </mat-card>
+
+    </form>
+</div>
